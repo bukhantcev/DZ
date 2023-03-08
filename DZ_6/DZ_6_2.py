@@ -6,7 +6,7 @@ maximum = int(input("Vvedite maximum diapazona: "))
 my_list = [ri(0, 100) for _ in range(12)]
 print(f"Zadan massiv: {my_list}")
 result = []
-for i in range(len(my_list) - 1):
+for i in range(len(my_list)):
     if my_list[i] >= minimum and my_list[i] <= maximum:
         result.append(i)
 if result == []:
