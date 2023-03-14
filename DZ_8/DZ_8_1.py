@@ -15,12 +15,14 @@ def open_file(file):
     return data
 def main_menu(file):
     answer = int(input("Выберите нужный пункт меню: "))
+    if answer > 8 or answer <= 0:
+        print("В меню нет такого пункта")
     if answer == 1:
 
         return open_file(my_file)
     return
 data = main_menu(my_file)
-print(" ".join(data[0]))
+# print(" ".join(data[0]))
 
 
 
