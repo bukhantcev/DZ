@@ -7,7 +7,7 @@ def open_file():
     with open(path, 'r', encoding='UTF-8') as file:
         data = file.readlines()
     for fields in data:
-        fields = fields.strip().split(" ")
+        fields = fields.strip().split(";")
         contact = {'name': fields[0],
                    'phone': fields[1],
                    'comment': fields[2]}
@@ -17,7 +17,7 @@ def open_file():
 def save_file():
     data = []
     for contact in phone_book:
-        data.append(' '.join(contact.values()))
+        data.append(';'.join(contact.values()))
     data = '\n'.join(data)
     with open(path, 'w', encoding='UTF-8') as file:
         file.write(data)
